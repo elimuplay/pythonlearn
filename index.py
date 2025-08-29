@@ -1,13 +1,29 @@
-site_name = "mfalme site"
-#a,b,c,d= 'A','B','C','D'
-#print(site_name)
-#print('cap of a is ',a)
-#my_children = ['Raiyan', 'Yahya', 'Aisha', 'Khairat']
-#print('my first child is :', my_children[0]);
+# Simple Calculator Program
 
-#my_wives = {'first':'Halima','Second':'Aisha','Third':'Khadija'}
-#print('my first wife is :', my_wives['first']);
-married = True
-#print(not(married))
-if married:
-    print('I am married')
+# Get user input
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+operation = input("Enter operation (+, -, *, /): ")
+
+# Perform the operation
+if operation == "+":
+    result = num1 + num2
+    print(f"{num1} + {num2} = {result}")
+
+elif operation == "-":
+    result = num1 - num2
+    print(f"{num1} - {num2} = {result}")
+
+elif operation == "*":
+    result = num1 * num2
+    print(f"{num1} * {num2} = {result}")
+
+elif operation == "/":
+    if num2 != 0:
+        result = num1 / num2
+        print(f"{num1} / {num2} = {result}")
+    else:
+        print("Error: Division by zero is not allowed!")
+
+else:
+    print("Invalid operation. Please enter +, -, * or /.")
